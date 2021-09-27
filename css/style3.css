@@ -1,0 +1,292 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+
+body{
+    background-color: #eee;
+    font-family: 'Libre Baskerville', serif;
+    height:100%;
+}
+
+
+ul{
+    list-style: none;
+}
+
+ .container { 
+
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+
+/* small */
+@media (min-width: 768px) {
+    .container{
+        width: 750px;
+    }
+
+}
+
+/* maidum */
+@media (min-width: 992px) {
+    .container{
+        width: 970px;
+    }
+
+
+}
+/* large */
+@media (min-width: 1200px) {
+    .container{
+        width: 1170px;
+    }
+
+
+}
+
+header{
+
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    z-index: 3;
+}
+
+
+header   .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid black;
+}
+
+header .brand{
+    color:rgb(69, 69, 223);
+    font-size:50px;
+}
+
+header .container nav {
+    flex: 1;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+   
+}
+
+
+header .container nav .toogle{
+    color: black;
+    font-size:30px;
+   
+}
+
+@media (min-width: 768px) {
+    header .container nav .toogle{
+        display: none;
+    }
+
+}
+
+header .container nav .toogle:hover + ul{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top:100%;
+    left: 0;
+    background-color:rgba(128, 128, 128, 0.418);
+    width: 100%;
+
+}
+
+header .container nav .toogle:hover + ul li a{
+    padding:10px;
+    border-bottom: 1px solid rgba(53, 57, 240, 0.39);
+}
+header .container nav ul{
+    display: flex;
+}
+
+@media (max-width:768px){
+    header .container nav ul {
+        display:none;
+    }
+    
+}
+
+header .container nav ul li a{
+    display: block;
+    text-decoration: none;
+    color: rgb(3, 0, 0);
+    padding: 30px 20px;
+}
+
+
+header .container nav ul li a.active,
+header .container nav ul li a:hover{
+    color: blue;
+}
+
+/* hedear end ---------------------------------------------------*/
+
+/* contact strt --------------------------------------------------------------*/
+
+.contact_us{
+    position: relative;
+   margin-top: 80px;
+    height:130px;
+    background-image: url(../images/new2.jpg);
+}
+
+.contact_us  .text  h2{
+    color:white;
+    font-size :25px;
+    padding:5px;
+}
+.contact_us  .text  p{
+  color:white;
+}
+.contact_us  .text{
+    padding-top: 40px;
+}
+
+
+
+/* gallary strt --------------------------------------------------------------*/
+
+.gallary{
+display:flex;
+flex-wrap: wrap;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+padding-top: 40px;
+padding-bottom: 40px;
+
+
+
+}
+
+.gallary  .single-image{
+    width:500px;
+    padding:15px;
+
+}
+.contact-form-btn{
+   
+    width:150px;
+    height:40px;
+    
+    border-radius: 0px 20px 0px;
+    background-color:rgb(59, 59, 236);
+    color:white;
+    margin-bottom: 30px;
+    cursor:pointer;
+  position:relative;
+ 
+ left:700px;
+    
+}
+.arrow{
+    padding: 5px;
+}
+
+
+
+     /* footer-start=------------------------------------------------------- */
+
+     .footer {
+        display: flex;
+        flex-flow: row wrap;
+        padding: 50px;
+        color: #fff;
+        background-color: darkblue;
+        }
+        .l-footer .brand{
+            font-size: 100px;
+            padding-top: 50px;
+            margin-left:8px ;
+        }
+        
+        .footer > * {
+        flex:  1 100%;
+        }
+        
+        .l-footer {
+        margin-right: 1.25em;
+        margin-bottom: 2em;
+        }
+        
+        h2 {
+        font-weight: 400;
+        font-size: 15px;
+        }
+        
+        .footer ul {
+        list-style: none;
+        padding-left: 0;
+        }
+        
+        .footer li {
+        line-height: 2em;
+        }
+        
+        .footer a {
+        text-decoration: none;
+        }
+        
+        .r-footer {
+        display: flex;
+        flex-flow: row wrap;
+        }
+        
+        .r-footer > * {
+        flex: 1 50%;
+        margin-right: 1.25em;
+        }
+        
+        .box a {
+        color: #999;
+        }
+        
+       
+        
+        .b-footer {
+        text-align: center;
+        color: rgb(243, 236, 236);
+        padding:  30px;
+        background-color:rgb(39, 99, 212);
+        }
+        
+        .l-footer p {
+        padding-right: 20%;
+        color: #999;
+        }   
+        
+        @media screen and (min-width: 600px) {
+        .r-footer > * {
+        flex: 1;
+        }
+        
+        .features {
+        flex-grow: 1;
+        }
+        
+        .l-footer {
+        flex: 1 0px;
+        }
+        
+        .r-footer {
+        flex: 2 0px;
+        }
+        }
+        
